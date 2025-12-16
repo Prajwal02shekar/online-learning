@@ -1,0 +1,34 @@
+{
+  "register": [
+    {
+      "id": "36bc",
+      "username": "Pavan",
+      "phone": "9874563210",
+      "email": "pavan@gmail.com",
+      "password": "pavan",
+      "age": "22"
+    },
+    {
+      "id": "64d1",
+      "username": "Likith",
+      "phone": "98426262326",
+      "email": "loki@gmail.cvom",
+      "password": "1234",
+      "age": "22"
+    }
+  ],
+  "courses": [
+    {
+      "id": "1",
+      "courseName": "Java Full Stack",
+      "courseDuration": "6-8 Months",
+      "trainerName": "Prajwal"
+    },
+    {
+      "id": "2",
+      "courseName": "Python Full Stack",
+      "courseDuration": "6-8 Months",
+      "trainerName": "Mohith"
+    }
+  ]
+}
