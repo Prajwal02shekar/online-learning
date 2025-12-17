@@ -1,20 +1,28 @@
 {
   "register": [
     {
-      "id": "36bc",
-      "username": "Pavan",
-      "phone": "9874563210",
-      "email": "pavan@gmail.com",
-      "password": "pavan",
+      "id": "39b6",
+      "username": "Danraj",
+      "phone": "9876543456",
+      "email": "dg@gmail.com",
+      "password": "123",
+      "age": "27"
+    },
+    {
+      "id": "881c",
+      "username": "Raksha Astkar",
+      "phone": "98765433456",
+      "email": "raksha@gmail.com",
+      "password": "1234",
       "age": "22"
     },
     {
-      "id": "64d1",
-      "username": "Likith",
-      "phone": "98426262326",
-      "email": "loki@gmail.cvom",
+      "id": "3678",
+      "username": "Afnan",
+      "phone": "9876543212",
+      "email": "afnan@gmail.com",
       "password": "1234",
-      "age": "22"
+      "age": "28"
     }
   ],
   "courses": [

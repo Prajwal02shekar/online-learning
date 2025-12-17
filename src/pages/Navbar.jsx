@@ -1,7 +1,19 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, replace, useNavigate } from 'react-router-dom'
 
 const Navbar = () => {
+    let user = JSON.parse(localStorage.getItem('userDegtails')) || {}
+    console.log(user[0])
+    let isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+    let navigate = useNavigate();
+
+
+
+    let handleLogout = () => {
+        localStorage.clear();
+        navigate('/')
+    }
+
     return (
         <nav className="navbarContainer">
             <aside className="logo">
@@ -13,8 +25,22 @@ const Navbar = () => {
                     <li><Link to="/courses">Courses</Link></li>
                     <li><Link to="/contactus">Contact US</Link></li>
                     <li><Link to="/trainer">Trainers</Link></li>
-                    <li><Link to="/login"><button>Login</button></Link></li>
-                    <li><Link to="/register" ><button>Register</button></Link></li>
+
+                    {
+                        !isLoggedIn ? (
+                            <>
+                                <li><Link to="/login"><button>Login</button></Link></li>
+                                <li><Link to="/register" ><button>Register</button></Link></li>
+                            </>
+                        ) :
+                            <>
+                                <li id='username'>
+                                    <span>👤</span>
+                                    <span>Hai, {user[0].username}</span>
+                                </li>
+                                <button id='logoutBtn' onClick={handleLogout}>Logout</button>
+                            </>
+                    }
                 </ol>
             </aside>
         </nav>

@@ -1,8 +1,10 @@
 import axios from 'axios';
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 
 const Register = () => {
+    let navigate = useNavigate();
     let [userData, setUserData] = useState({
         username: "",
         phone: "",
@@ -12,7 +14,7 @@ const Register = () => {
     })
     let handleChange = (e) => {
         let { name, value } = e.target;
-        setUserData({ ...userData, [name]:value })
+        setUserData({ ...userData, [name]: value })
     }
     let handleSubmit = (e) => {
         e.preventDefault();
@@ -22,15 +24,25 @@ const Register = () => {
             .then((res) => {
                 console.log(res.data)
                 toast.success("User Register Successfull")
+                setTimeout(() => {
+                    navigate('/login')
+                }, 2000)
+                setUserData({
+                    username: "",
+                    phone: "",
+                    email: "",
+                    password: "",
+                    age: "",
+                })
             })
     }
     return (
         <form onSubmit={handleSubmit}>
-            <ToastContainer/>
+            <ToastContainer />
             <fieldset>
                 <legend>Signup</legend>
-                <label htmlFor="username">Enter Username:</label>
-                <input type="text" id='username' placeholder='Enter Username' name='username' onChange={handleChange} />
+                <label htmlFor="un">Enter Username:</label>
+                <input type="text" id='un' placeholder='Enter Username' name='username' onChange={handleChange} />
                 <br /><br />
                 <label htmlFor="phone">Enter Phone Number:</label>
                 <input type="text" id='phone' placeholder='Enter Phone Number' name='phone' onChange={handleChange} />
