@@ -41,22 +41,25 @@ const Login = () => {
       })
   }
   return (
-    <form onSubmit={handleSubmit} >
-      <ToastContainer />
-      <fieldset>
-        <legend>Login</legend>
-        <label htmlFor="email">Enter Email:</label>
-        <input type="email" id='email' placeholder='Enter Email' onChange={handleEmail} name='email'
-        />
-        <br /><br />
-        <label htmlFor="password">Enter Password:</label>
-        <input type="password" id='password' placeholder='Enter Password' name='password' onChange={handlePassword} />
-        <br /><br />
-        <button>Submit</button>
-        <button>Reset</button>
-
-      </fieldset>
-    </form>
+     <form onSubmit={handleSubmit} className='register-form'>
+                <ToastContainer />
+                <fieldset>
+                    <legend>Login</legend>
+    
+                    <label htmlFor="email">Email:</label>
+                    <input type="email" id='email' placeholder='Enter Email' name='email' onChange={handleEmail} />
+    
+                    <label htmlFor="password">Password:</label>
+                    <input type="password" id='password' placeholder='Enter Password' name='password' onChange={handlePassword} />
+  
+    
+                    <div className="button-container">
+                        <button type="submit">Submit</button>
+                        <button type="reset" onClick={() => setUserData({ username: "", phone: "", email: "", password: "", age: "" })}>Reset</button>
+                    </div>
+    
+                </fieldset>
+            </form>
   )
 }
 

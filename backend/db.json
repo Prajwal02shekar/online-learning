@@ -1,42 +1,44 @@
 {
   "register": [
     {
-      "id": "39b6",
-      "username": "Danraj",
-      "phone": "9876543456",
-      "email": "dg@gmail.com",
+      "id": "b1b3",
+      "username": "Prajwal",
+      "phone": "9874563210",
+      "email": "p@gmail.com",
       "password": "123",
-      "age": "27"
+      "age": "25"
     },
     {
-      "id": "881c",
-      "username": "Raksha Astkar",
-      "phone": "98765433456",
-      "email": "raksha@gmail.com",
-      "password": "1234",
-      "age": "22"
-    },
-    {
-      "id": "3678",
-      "username": "Afnan",
+      "id": "75fe",
+      "username": "Balaji",
       "phone": "9876543212",
-      "email": "afnan@gmail.com",
-      "password": "1234",
-      "age": "28"
+      "email": "balaji@gmail.com",
+      "password": "12345",
+      "age": "23"
+    }
+  ],
+  "contact": [
+    {
+      "id": "4fbe",
+      "name": "Chintu",
+      "email": "chintu@gmail.com",
+      "phone": "9874563210",
+      "message": "Hai bro had hu lunch ,bye bye c u later "
+    },
+    {
+      "id": "e9ed",
+      "name": "Chintu",
+      "email": "chintu@gmail.com",
+      "phone": "9874563210",
+      "message": "Hai bro"
     }
   ],
   "courses": [
     {
-      "id": "1",
+      "id": "2",
       "courseName": "Java Full Stack",
       "courseDuration": "6-8 Months",
       "trainerName": "Prajwal"
-    },
-    {
-      "id": "2",
-      "courseName": "Python Full Stack",
-      "courseDuration": "6-8 Months",
-      "trainerName": "Mohith"
     }
   ]
 }

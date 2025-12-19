@@ -8,6 +8,7 @@ import Trainers from './pages/trainerComponent/Trainers'
 import Login from './pages/authComponent/Login'
 import Register from './pages/authComponent/Register'
 import PageNotFound from './pages/PageNotFound'
+import CreateCourse from './pages/courseComponent/CreateCourse'
 
 const App = () => {
   let router = createBrowserRouter([
@@ -40,6 +41,10 @@ const App = () => {
           element: <Register />,
         },
         {
+          path: "/createCourse",
+          element: <CreateCourse />,
+        },
+        {
           path: "*",
           element: <PageNotFound />,
         }
@@ -47,7 +52,7 @@ const App = () => {
     }
   ])
   return (
-    <RouterProvider router={router}/>
+    <RouterProvider router={router} />
   )
 }
 
