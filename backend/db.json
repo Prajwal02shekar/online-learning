@@ -35,10 +35,18 @@
   ],
   "courses": [
     {
-      "id": "2",
-      "courseName": "Java Full Stack",
-      "courseDuration": "6-8 Months",
-      "trainerName": "Prajwal"
+      "id": "00c8",
+      "courseName": "MERN Stack",
+      "duration": "5 months",
+      "trainerName": "Prajwal",
+      "startDate": "2025-12-22"
+    },
+    {
+      "id": "f39b",
+      "courseName": "Software Testing",
+      "duration": "8 Months",
+      "trainerName": "Abhilash Sir",
+      "startDate": "2026-01-05"
     }
   ]
 }

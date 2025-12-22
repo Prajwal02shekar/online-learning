@@ -140,7 +140,7 @@
     text-align: right;
 }
 
-.register-form input {
+.register-form input,.register-form select {
     width: 100%;
     padding: 12px 15px;
     border: 1px solid #ddd;
@@ -443,12 +443,12 @@ marquee {
     transition: all 0.2s ease;
 }
 
-.course-card button:nth-child(4) {
+#deleteBtn{
     background-color: #e74c3ce6;
     color: #fff;
 }
 
-.course-card button:nth-child(4):hover {
+#deleteBtn:hover {
     background-color: #c0392b;
 }
 

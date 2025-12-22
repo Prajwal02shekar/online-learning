@@ -9,6 +9,7 @@ import Login from './pages/authComponent/Login'
 import Register from './pages/authComponent/Register'
 import PageNotFound from './pages/PageNotFound'
 import CreateCourse from './pages/courseComponent/CreateCourse'
+import EditCourse from './pages/courseComponent/EditCourse'
 
 const App = () => {
   let router = createBrowserRouter([
@@ -43,6 +44,10 @@ const App = () => {
         {
           path: "/createCourse",
           element: <CreateCourse />,
+        },
+        {
+          path: "/editCourse/:id",
+          element: <EditCourse />,
         },
         {
           path: "*",

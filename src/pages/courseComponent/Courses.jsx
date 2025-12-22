@@ -20,12 +20,15 @@ const Courses = () => {
     axios.delete(`http://localhost:3000/courses/${id}`)
       .then(() => {
         toast.info("Course Deleted Successfully");
-        setTimeout(()=>{
-          navigate(0); 
-        },3000)
+        setTimeout(() => {
+          navigate(0);
+        }, 3000)
       });
   };
-  
+
+  let handleEdit=(id)=>{
+    navigate(`/editCourse/${id}`)
+  }
   return (
     <section id="courselist-container">
       <Sidebar />
@@ -37,10 +40,11 @@ const Courses = () => {
             return (
               <ol key={courseData.id} className='course-card'>
                 <p>{courseData.courseName}</p>
-                <p>{courseData.courseDuration}</p>
+                <p>{courseData.duration}</p>
                 <p>{courseData.trainerName}</p>
-                <button onClick={() => handleDelete(courseData.id)}>Delete</button>
-                <button>Edit</button>
+                <p>{courseData.startDate}</p>
+                <button id='deleteBtn' onClick={() => handleDelete(courseData.id)}>Delete</button>
+                <button onClick={()=>handleEdit(courseData.id)}>Edit</button>
               </ol>
             )
           })
