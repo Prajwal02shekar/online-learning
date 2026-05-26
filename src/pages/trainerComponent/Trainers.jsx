@@ -1,4 +1,6 @@
 import React from 'react'
+import isAuthorized from '../../utils/Auth'
+import { Navigate } from 'react-router-dom'
 
 const Trainers = () => {
   let trainersDetails = [
@@ -47,8 +49,10 @@ const Trainers = () => {
 
 
   ]
-  return (
-    <section className="tariner-mainContainer">
+  
+  return(
+    
+      <section className="tariner-mainContainer">
       <h1>Trainer Details</h1>
       <aside className="trainer-container">
         {
@@ -67,6 +71,7 @@ const Trainers = () => {
       </aside>
     </section>
   )
+  
 }
 
 export default Trainers

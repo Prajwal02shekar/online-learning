@@ -15,6 +15,30 @@
       "email": "balaji@gmail.com",
       "password": "12345",
       "age": "23"
+    },
+    {
+      "id": "f5ff",
+      "username": "Prajwal",
+      "phone": "8095460172",
+      "email": "p@gmail.com",
+      "password": "12",
+      "age": ""
+    },
+    {
+      "id": "c93d",
+      "username": "Prajwal",
+      "phone": "",
+      "email": "p@gmail.com",
+      "password": "123",
+      "age": "25"
+    },
+    {
+      "id": "dd80",
+      "username": "Sakshi R",
+      "phone": "8095460172",
+      "email": "sakshi@gmail.com",
+      "password": "1234",
+      "age": "25"
     }
   ],
   "contact": [
@@ -35,18 +59,11 @@
   ],
   "courses": [
     {
-      "id": "00c8",
-      "courseName": "MERN Stack",
+      "id": "7c22",
+      "courseName": "Java Full Stack",
       "duration": "5 months",
-      "trainerName": "Prajwal",
-      "startDate": "2025-12-22"
-    },
-    {
-      "id": "f39b",
-      "courseName": "Software Testing",
-      "duration": "8 Months",
-      "trainerName": "Abhilash Sir",
-      "startDate": "2026-01-05"
+      "trainerName": "Balaji P",
+      "startDate": "2026-02-02"
     }
   ]
 }

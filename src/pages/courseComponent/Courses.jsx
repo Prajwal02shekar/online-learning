@@ -3,6 +3,7 @@ import Sidebar from '../component/Sidebar'
 import axios from 'axios'
 import { toast, ToastContainer } from 'react-toastify'
 import { useNavigate } from 'react-router-dom'
+import isAuthorized from '../../utils/Auth'
 
 const Courses = () => {
   let [courses, setCourses] = useState([])
@@ -17,6 +18,15 @@ const Courses = () => {
   }, [])
 
   const handleDelete = (id) => {
+    
+    if(!isAuthorized()){
+      toast.error("Please Login");
+      setTimeout(()=>[
+        
+        navigate('/login')
+      ],3000)
+      return;
+    }
     axios.delete(`http://localhost:3000/courses/${id}`)
       .then(() => {
         toast.info("Course Deleted Successfully");

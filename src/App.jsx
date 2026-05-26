@@ -10,6 +10,7 @@ import Register from './pages/authComponent/Register'
 import PageNotFound from './pages/PageNotFound'
 import CreateCourse from './pages/courseComponent/CreateCourse'
 import EditCourse from './pages/courseComponent/EditCourse'
+import ProtectedRouting from './pages/authComponent/ProtectedRouting'
 
 const App = () => {
   let router = createBrowserRouter([
@@ -30,10 +31,6 @@ const App = () => {
           element: <ContactUs />,
         },
         {
-          path: "/trainer",
-          element: <Trainers />,
-        },
-        {
           path: "/login",
           element: <Login />,
         },
@@ -42,13 +39,23 @@ const App = () => {
           element: <Register />,
         },
         {
-          path: "/createCourse",
-          element: <CreateCourse />,
+          element: <ProtectedRouting />,
+          children: [
+            {
+              path: "/createCourse",
+              element: <CreateCourse />,
+            },
+            {
+              path: "/editCourse/:id",
+              element: <EditCourse />,
+            },
+            {
+              path: "/trainer",
+              element: <Trainers />,
+            },
+          ]
         },
-        {
-          path: "/editCourse/:id",
-          element: <EditCourse />,
-        },
+
         {
           path: "*",
           element: <PageNotFound />,

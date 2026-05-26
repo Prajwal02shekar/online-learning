@@ -28,6 +28,8 @@ const Login = () => {
           toast.success("Login Successfull")
           localStorage.setItem("userDegtails", JSON.stringify(res.data));
           localStorage.setItem("isLoggedIn", "true")
+
+          localStorage.setItem('token',res.data)
           setEmail("");
           sePassword("");
           setTimeout(() => {

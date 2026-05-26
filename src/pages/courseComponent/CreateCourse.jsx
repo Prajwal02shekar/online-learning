@@ -57,7 +57,7 @@ const CreateCourse = () => {
         <label htmlFor="startDate">Course Start Date</label>
         <input type="date" id='startDate' placeholder='Enter Start Date' name='startDate' onChange={handleChange} />
 
-    
+
         <div className="button-container">
           <button type="submit">Create Course</button>
           <button type="reset" onClick={() => setCourseData({ courseName: "", duration: "", trainerName: "", startDate: "" })}>Reset</button>
